@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	url.delegate = self;
-	embedly = [[Embedly alloc] initWithKey:@"079dc63c353211e088ae4040f9f86dcd"];
+	embedly = [[Embedly alloc] init];
 	embedly.maxWidth = [NSNumber numberWithInt:400];
 	embedly.delegate = self;
 	

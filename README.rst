@@ -60,12 +60,12 @@ Delegate
 
 * In order for your Application to receive the information returned from Embedly you should 
   implement the EmbedlyDelegate::
-    
-  #import <UIKit/UIKit.h>
-  #import "Embedly.h"
   
-  @interface YourViewController : UIViewController <EmbedlyDelegate> {
-  }
+    #import <UIKit/UIKit.h>
+    #import "Embedly.h"
+    @interface YourViewController : UIViewController <EmbedlyDelegate>
+    {
+    }
 
 * There are 4 Methods that should be implemented as part of the Embedly Delgate. These map to the NSURLConnection
   responses::

@@ -18,6 +18,7 @@
 	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
 	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
 	[embedly callWithUrl:url.text];
+	[earray release];
 }
 
 // Test the Embedly API with Multi-get
@@ -29,6 +30,8 @@
 	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
 	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
 	[embedly callWithArray:urls];
+	[earray release];
+	[urls release];
 }
 
 

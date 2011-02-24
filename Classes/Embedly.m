@@ -84,7 +84,7 @@
 
 // Call the Embedly API with One URL. Will return a Dictionary
 - (void)callWithUrl:(NSString *)url {
-	NSString* request = [[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&url=%@", self.path, kEmbedlyApiVersion, self.endpoint, url];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&url=%@", self.path, kEmbedlyApiVersion, self.endpoint, url] autorelease];
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
 	}
@@ -97,18 +97,19 @@
 	
 	NSURL* u = [[NSURL alloc] initWithString:request];
 	[self callEmbedlyWithURL:u];
+	[u release];
 }
 
 // Call the Embedly API with Multiple URLs. Will return an Array of Dictionaries
 - (void)callWithArray:(NSArray *)urls {
-	NSString* set = [[NSString alloc] initWithString:@""];
+	NSString* set = [[[NSString alloc] initWithString:@""] autorelease];
 	for( NSString *s in urls){
 		set = [set stringByAppendingString:@","];
 		set = [set stringByAppendingString:s];
 	}
 	set = [set substringFromIndex:1];	// remove the initial , from the url string
 	
-	NSString* request = [[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&urls=%@", self.path, kEmbedlyApiVersion, self.endpoint, set];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&urls=%@", self.path, kEmbedlyApiVersion, self.endpoint, set] autorelease];
 	
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
@@ -123,13 +124,16 @@
 	
 	NSURL* u = [[NSURL alloc] initWithString:request];
 	[self callEmbedlyWithURL:u];
+	[u release];
 }
 
 - (void) callEmbedlyWithURL:(NSURL *)url{
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];
 	[request setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
 	[request addValue:kEmbedlyClientHeader forHTTPHeaderField:@"X-Embedly-Client"];
-	self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	self.connection = c;
+	[c release];
 }
 
 

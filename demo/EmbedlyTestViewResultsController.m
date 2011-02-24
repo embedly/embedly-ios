@@ -106,7 +106,9 @@
 	if (self.isArray){
 		if (cell == nil) {
 			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-			[cell.textLabel setText:[[NSString alloc] initWithFormat:@"%d", indexPath.row]];
+			NSString *text = [[NSString alloc] initWithFormat:@"%d", indexPath.row];
+			[cell.textLabel setText:text];
+			[text release];
 		}
 	} else {
 		NSString *attrName = [keys objectAtIndex:indexPath.row];
@@ -122,9 +124,11 @@
 			} else {
 				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 				[cell.textLabel setText:title];
-				if( [obj objectForKey:attrName] != [NSNull null] )
-					[cell.detailTextLabel setText: [[NSString alloc] initWithFormat:@"%@", [obj objectForKey:attrName]]];
-				else {
+				if( [obj objectForKey:attrName] != [NSNull null] ){
+					NSString *text = [[NSString alloc] initWithFormat:@"%@", [obj objectForKey:attrName]];
+					[cell.detailTextLabel setText: text];
+					[text release];
+				} else {
 					[cell.detailTextLabel setText: @"null"];
 				}
 
@@ -202,15 +206,11 @@
 	} else {
 		NSString *attrName = [[NSString alloc] initWithString:[keys objectAtIndex:indexPath.row]];
 		if ( [attrName isEqualToString:@"object"] ){
-			NSLog(@"Object Display");
 			UIViewController *v = [[UIViewController alloc] init];
-			
-			
 			
 			[self.navigationController pushViewController:v animated:YES];
 			[v release];
 		} else if ( [attrName isEqualToString:@"html"] ) {
-			NSLog(@"HTML Display");
 			UIViewController *v = [[UIViewController alloc] init];
 			
 			UIWebView *wv = [[UIWebView alloc] init];
@@ -218,13 +218,16 @@
 			[wv loadHTMLString:[obj objectForKey:attrName] baseURL:[NSURL URLWithString:@"http://embed.ly"]];
 			 v.view = wv;
 			[self.navigationController pushViewController:v animated:YES];
+			[wv release];
 			[v release];
 		} else if ( [attrName isEqualToString:@"images"] ){
 			NSLog(@"Image Display");
 			NSMutableArray *images = [[NSMutableArray alloc] init];
 			for(NSDictionary *image in [obj objectForKey:attrName]){
-				NSData *data = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[image objectForKey:@"url"]]];
+				NSURL *u = [[NSURL alloc] initWithString:[image objectForKey:@"url"]];
+				NSData *data = [[NSData alloc] initWithContentsOfURL:u];
 				UIImage *img = [[UIImage alloc] initWithData:data];
+				[u release];
 				[images addObject:img];
 				[img release];
 				[data release];
@@ -232,9 +235,11 @@
 			UIViewController *view = [[UIViewController alloc] init];
 			UIImageView *imageView = [[UIImageView alloc] initWithImage:[images objectAtIndex:0]];
 			imageView.animationImages = images;
-			imageView.animationDuration = 5;
+			
+			imageView.animationDuration = 5.0;
 			view.view = imageView;
 			[self.navigationController pushViewController:view animated:YES];
+			[view release];
 			[imageView startAnimating];
 			[imageView release];
 			

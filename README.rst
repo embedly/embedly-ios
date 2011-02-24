@@ -67,10 +67,11 @@ Delegate
   @interface YourViewController : UIViewController <EmbedlyDelegate> {
   }
 
-* There are 3 Methods that should be implemented as part of the Embedly Delgate. These map to the NSURLConnection
+* There are 4 Methods that should be implemented as part of the Embedly Delgate. These map to the NSURLConnection
   responses::
   
-    -(void) embedlyDidReturnData:(NSData *)data;
+    -(void) embedlyDidReturnRawData:(NSData *)data;
+    -(void) embedlyDidLoad:(id)result;
     -(void) embedlyDidFailWithError:(NSError *)error;
     -(void) embedlyDidReceiveResponse:(NSURLResponse *)response;
 

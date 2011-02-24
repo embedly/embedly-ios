@@ -12,6 +12,7 @@
 @interface EmbedlyTestViewController : UIViewController <UITextFieldDelegate, EmbedlyDelegate> {
 	UITextField *url;
 	UIButton *submit;
+	UIButton *test;
 	UISegmentedControl *endpoint;	
 	Embedly *embedly;
 	
@@ -19,10 +20,11 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *url;
 @property (nonatomic, retain) IBOutlet UIButton *submit;
+@property (nonatomic, retain) IBOutlet UIButton *test;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *endpoint;
 @property (nonatomic, retain) Embedly *embedly;
 
 - (IBAction)submit:(id)sender;
-
+- (IBAction)testMultipleUrls:(id)sender;
 @end
 

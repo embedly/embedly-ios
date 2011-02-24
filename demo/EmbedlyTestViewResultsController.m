@@ -183,7 +183,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     
-	NSString *attrName = [[NSString alloc] initWithString:[keys objectAtIndex:indexPath.row]];
+	
 	EmbedlyTestViewResultsController *detailView = [[EmbedlyTestViewResultsController alloc] initWithStyle:UITableViewStylePlain];
 	if (self.isArray){
 		
@@ -200,6 +200,7 @@
 		}
 		
 	} else {
+		NSString *attrName = [[NSString alloc] initWithString:[keys objectAtIndex:indexPath.row]];
 		if ( [attrName isEqualToString:@"object"] ){
 			NSLog(@"Object Display");
 			UIViewController *v = [[UIViewController alloc] init];
@@ -249,11 +250,10 @@
 			[self.navigationController pushViewController:detailView animated:YES];
 			
 		}
-		
+		[attrName release];
 		
 	}
 	[detailView release];
-	[attrName release];
 }
 
 

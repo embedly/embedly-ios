@@ -8,11 +8,10 @@
 
 #import "EmbedlyTestViewController.h"
 #import "EmbedlyTestViewResultsController.h"
-#import "JSON.h"
 
 @implementation EmbedlyTestViewController
 
-@synthesize url, submit, endpoint;
+@synthesize url, submit, endpoint, test;
 @synthesize embedly;
 
 - (IBAction)submit:(id) sender {
@@ -20,22 +19,17 @@
 	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
 	[embedly callWithUrl:url.text];
 }
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+// Test the Embedly API with Multi-get
+- (IBAction)testMultipleUrls:(id) sender {
+	NSArray *urls = [[NSArray alloc] initWithObjects:@"http://www.youtube.com/watch?v=BfcWraeZvcw",
+													 @"http://www.flickr.com/photos/cybertiesto/336245284/",
+													 @"http://vimeo.com/20187108",
+													 nil];
+	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
+	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
+	[embedly callWithArray:urls];
 }
-*/
 
 
 
@@ -54,20 +48,26 @@
 #pragma mark -
 #pragma mark EmbedlyDelegate Methods
 //===========================================================
-- (void)embedlyDidReturnData:(NSData *)data {
-	
-	SBJsonParser *parser = [[SBJsonParser alloc] init];
-	NSArray *urls = [parser objectWithData:data];
-	
-	// In this example we return 1 url
-	NSDictionary *obj = [[NSDictionary alloc] initWithDictionary: [urls objectAtIndex:0]];
-	
+- (void)embedlyDidLoad:(id)result {
 	EmbedlyTestViewResultsController *aController = [[EmbedlyTestViewResultsController alloc] initWithStyle:UITableViewStylePlain];
-	aController.obj = obj;
+	
+	if( [result isKindOfClass:[NSArray class]] ){
+		aController.objArray = result;
+		aController.title = @"Results";
+	} else if ( [result isKindOfClass:[NSDictionary class]] ){
+		aController.obj = result;
+		
+	} else {
+		NSLog(@"%@", result);
+		[aController release];
+		return;
+	}
 	[self.navigationController pushViewController:aController animated:YES];
 	[aController release];
-	[parser release];
-	[obj release];
+}
+
+- (void)embedlyDidReturnRawData:(NSData *)data {
+	
 }
 
 - (void)embedlyDidFailWithError:(NSError *)error {
@@ -106,7 +106,7 @@
 	endpoint = nil;
 	url = nil;
 	submit = nil;
-	
+	test = nil;
 }
 
 
@@ -114,6 +114,7 @@
 	[endpoint release];
 	[url release];
 	[submit release];
+	[test release];
     [super dealloc];
 }
 

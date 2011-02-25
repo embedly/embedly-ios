@@ -9,7 +9,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = A9B8FA33130C717900458404 /* EmbedlyTest */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* EmbedlyTest */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* EmbedlyTest */,
@@ -104,20 +104,84 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 320340168;
-			PBXWorkspaceStateSaveDate = 320340168;
+			PBXPerProjectTemplateStateSaveDate = 320358732;
+			PBXWorkspaceStateSaveDate = 320358732;
 		};
 		perUserProjectItems = {
-			A96EBB501316DB6100C00201 /* PBXTextBookmark */ = A96EBB501316DB6100C00201 /* PBXTextBookmark */;
-			A97D0C4F13180100000000C8 /* PBXTextBookmark */ = A97D0C4F13180100000000C8 /* PBXTextBookmark */;
-			A97D0C5013180100000000C8 /* PlistBookmark */ = A97D0C5013180100000000C8 /* PlistBookmark */;
-			A97D0C5E13180144000000C8 /* PlistBookmark */ = A97D0C5E13180144000000C8 /* PlistBookmark */;
-			A9DCC8B91317014B0071E3BC /* PBXTextBookmark */ = A9DCC8B91317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8C6131701D10071E3BC /* PBXTextBookmark */ = A9DCC8C6131701D10071E3BC /* PBXTextBookmark */;
+			A957193A1318494F000AB064 /* PlistBookmark */ = A957193A1318494F000AB064 /* PlistBookmark */;
+			A9571945131849A6000AB064 /* PlistBookmark */ = A9571945131849A6000AB064 /* PlistBookmark */;
+			A9571948131849B0000AB064 /* PlistBookmark */ = A9571948131849B0000AB064 /* PlistBookmark */;
+			A957195313184AB2000AB064 /* PlistBookmark */ = A957195313184AB2000AB064 /* PlistBookmark */;
+			A957195413184ABE000AB064 /* PlistBookmark */ = A957195413184ABE000AB064 /* PlistBookmark */;
+			A96EBB501316DB6100C00201 = A96EBB501316DB6100C00201 /* PBXTextBookmark */;
+			A97D0C4F13180100000000C8 = A97D0C4F13180100000000C8 /* PBXTextBookmark */;
+			A97D0C5013180100000000C8 = A97D0C5013180100000000C8 /* PlistBookmark */;
+			A97D0C5E13180144000000C8 = A97D0C5E13180144000000C8 /* PlistBookmark */;
+			A9DCC8B91317014B0071E3BC = A9DCC8B91317014B0071E3BC /* PBXTextBookmark */;
+			A9DCC8C6131701D10071E3BC = A9DCC8C6131701D10071E3BC /* PBXTextBookmark */;
 		};
 		sourceControlManager = A9B8FA4A130C717F00458404 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	A957193A1318494F000AB064 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A9571945131849A6000AB064 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A9571948131849B0000AB064 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A957195313184AB2000AB064 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A957195413184ABE000AB064 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleDisplayName,
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */ = {
 		uiCtxt = {
@@ -176,7 +240,7 @@
 		);
 		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	A97D0C5E13180144000000C8 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -187,7 +251,7 @@
 		);
 		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	A9B8FA33130C717900458404 /* EmbedlyTest */ = {
 		isa = PBXExecutable;
@@ -267,7 +331,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libSystem.B.dylib;
-		modificationTime = 320340256.809704;
+		modificationTime = 320358834.698263;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = malloc_error_break;

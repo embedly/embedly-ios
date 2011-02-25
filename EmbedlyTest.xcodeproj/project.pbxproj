@@ -105,7 +105,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A97D0C49131800E6000000C8 /* icon114x114.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -127,6 +126,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A957194213184968000AB064 /* Assets */,
 				2899E5210DE3E06400AC0155 /* EmbedlyTestViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */,
@@ -142,6 +142,14 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A957194213184968000AB064 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A97D0C49131800E6000000C8 /* icon114x114.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		A97DCA4A130F0CCD00F47DAC /* Demo App */ = {

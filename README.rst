@@ -39,6 +39,9 @@ Initializing Embedly
     // Alternatively if you are an Embedly Pro User
     Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
 
+    // Alternatively if you are an Embedly Pro User and know what endpoint you want to use
+    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere" andEndpoint:@"preview"];
+
 * Call the Embedly API with a URL String or array of URLs::
     
     // one URL 

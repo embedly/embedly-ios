@@ -26,6 +26,7 @@
 		A96EBB491316DB4500C00201 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB3F1316DB4500C00201 /* SBJsonTokeniser.m */; };
 		A96EBB4A1316DB4500C00201 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB411316DB4500C00201 /* SBJsonWriter.m */; };
 		A96EBB4D1316DB5900C00201 /* Embedly.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB4C1316DB5900C00201 /* Embedly.m */; };
+		A97D0C4A131800E6000000C8 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A97D0C49131800E6000000C8 /* icon114x114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		A96EBB411316DB4500C00201 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/SBJsonWriter.m"; sourceTree = "<group>"; };
 		A96EBB4B1316DB5900C00201 /* Embedly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Embedly.h; sourceTree = "<group>"; };
 		A96EBB4C1316DB5900C00201 /* Embedly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Embedly.m; sourceTree = "<group>"; };
+		A97D0C49131800E6000000C8 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114x114.png; path = assets/icon114x114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A97D0C49131800E6000000C8 /* icon114x114.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -231,6 +234,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* EmbedlyTestViewController.xib in Resources */,
+				A97D0C4A131800E6000000C8 /* icon114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,5 @@
 // !$*UTF8*$!
 {
-	1D3623240D0F684500981E51 /* EmbedlyTestAppDelegate.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = EmbedlyTestAppDelegate.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/EmbedlyTestAppDelegate.h;
-		sourceTree = "<absolute>";
-	};
 	1D6058900D05DD3D006BFB54 /* EmbedlyTest */ = {
 		activeExec = 0;
 		executables = (
@@ -17,7 +9,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = A9B8FA33130C717900458404 /* EmbedlyTest */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* EmbedlyTest */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* EmbedlyTest */,
@@ -112,32 +104,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 320273564;
-			PBXWorkspaceStateSaveDate = 320273564;
+			PBXPerProjectTemplateStateSaveDate = 320340168;
+			PBXWorkspaceStateSaveDate = 320340168;
 		};
 		perUserProjectItems = {
-			A96EBB501316DB6100C00201 = A96EBB501316DB6100C00201 /* PBXTextBookmark */;
-			A96EBB511316DB6100C00201 = A96EBB511316DB6100C00201 /* PBXTextBookmark */;
-			A96EBB551316DB7000C00201 = A96EBB551316DB7000C00201 /* PBXTextBookmark */;
-			A97DCA4C130F0D1900F47DAC = A97DCA4C130F0D1900F47DAC /* PBXTextBookmark */;
-			A9A05BE3130D830200C18FA8 = A9A05BE3130D830200C18FA8 /* PBXTextBookmark */;
-			A9A05BE4130D830200C18FA8 = A9A05BE4130D830200C18FA8 /* PBXTextBookmark */;
-			A9C753E713159630007613E4 = A9C753E713159630007613E4 /* PBXTextBookmark */;
-			A9C753E813159630007613E4 = A9C753E813159630007613E4 /* PBXTextBookmark */;
-			A9C753F013159B60007613E4 = A9C753F013159B60007613E4 /* PBXTextBookmark */;
-			A9DCC8801316FCAB0071E3BC /* PBXTextBookmark */ = A9DCC8801316FCAB0071E3BC /* PBXTextBookmark */;
+			A96EBB501316DB6100C00201 /* PBXTextBookmark */ = A96EBB501316DB6100C00201 /* PBXTextBookmark */;
+			A97D0C4F13180100000000C8 /* PBXTextBookmark */ = A97D0C4F13180100000000C8 /* PBXTextBookmark */;
+			A97D0C5013180100000000C8 /* PlistBookmark */ = A97D0C5013180100000000C8 /* PlistBookmark */;
+			A97D0C5E13180144000000C8 /* PlistBookmark */ = A97D0C5E13180144000000C8 /* PlistBookmark */;
 			A9DCC8B91317014B0071E3BC /* PBXTextBookmark */ = A9DCC8B91317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8BA1317014B0071E3BC /* PBXTextBookmark */ = A9DCC8BA1317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8BB1317014B0071E3BC /* PBXTextBookmark */ = A9DCC8BB1317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8BC1317014B0071E3BC /* PBXTextBookmark */ = A9DCC8BC1317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8C51317016E0071E3BC /* PBXTextBookmark */ = A9DCC8C51317016E0071E3BC /* PBXTextBookmark */;
 			A9DCC8C6131701D10071E3BC /* PBXTextBookmark */ = A9DCC8C6131701D10071E3BC /* PBXTextBookmark */;
-			A9DCC8C7131701D10071E3BC /* PBXTextBookmark */ = A9DCC8C7131701D10071E3BC /* PBXTextBookmark */;
-			A9DCC8C8131701D10071E3BC /* PBXTextBookmark */ = A9DCC8C8131701D10071E3BC /* PBXTextBookmark */;
-			A9DCC8CD131701ED0071E3BC /* PBXTextBookmark */ = A9DCC8CD131701ED0071E3BC /* PBXTextBookmark */;
-			A9DCC8D0131702550071E3BC /* PBXTextBookmark */ = A9DCC8D0131702550071E3BC /* PBXTextBookmark */;
-			A9DCC8D3131703FB0071E3BC /* PBXTextBookmark */ = A9DCC8D3131703FB0071E3BC /* PBXTextBookmark */;
-			A9FF83C41315B5D20022C213 = A9FF83C41315B5D20022C213 /* PBXTextBookmark */;
 		};
 		sourceControlManager = A9B8FA4A130C717F00458404 /* Source Control */;
 		userBuildSettings = {
@@ -152,9 +128,9 @@
 	};
 	A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1260, 3419}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1260, 3679}}";
 			sepNavSelRange = "{7543, 0}";
-			sepNavVisRange = "{5795, 2096}";
+			sepNavVisRange = "{5949, 1942}";
 		};
 	};
 	A96EBB4B1316DB5900C00201 /* Embedly.h */ = {
@@ -166,9 +142,9 @@
 	};
 	A96EBB4C1316DB5900C00201 /* Embedly.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1260, 2873}}";
-			sepNavSelRange = "{3434, 0}";
-			sepNavVisRange = "{1895, 2107}";
+			sepNavIntBoundsRect = "{{0, 0}, {1619, 2912}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 459}";
 		};
 	};
 	A96EBB501316DB6100C00201 /* PBXTextBookmark */ = {
@@ -181,103 +157,37 @@
 		vrLen = 614;
 		vrLoc = 0;
 	};
-	A96EBB511316DB6100C00201 /* PBXTextBookmark */ = {
+	A97D0C4F13180100000000C8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 1";
+		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
+		name = "EmbedlyTestViewResultsController.m: 239";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 7543;
 		rType = 0;
-		vrLen = 576;
-		vrLoc = 0;
+		vrLen = 1942;
+		vrLoc = 5949;
 	};
-	A96EBB551316DB7000C00201 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 1";
+	A97D0C5013180100000000C8 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
 		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 576;
-		vrLoc = 0;
+		rLoc = 9223372036854775807;
 	};
-	A97DC882130EE7DA00F47DAC /* EmbedlyTestViewResultsController.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = EmbedlyTestViewResultsController.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/EmbedlyTestViewResultsController.h;
-		sourceTree = "<absolute>";
-	};
-	A97DCA4C130F0D1900F47DAC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* EmbedlyTestAppDelegate.h */;
-		name = "EmbedlyTestAppDelegate.h: 19";
+	A97D0C5E13180144000000C8 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
 		rLen = 0;
-		rLoc = 474;
-		rType = 0;
-		vrLen = 484;
-		vrLoc = 0;
-	};
-	A97DCA67130F0F7D00F47DAC /* SBJsonTokeniser.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = SBJsonTokeniser.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/SBJsonTokeniser.h;
-		sourceTree = "<absolute>";
-	};
-	A97DCA6A130F0F7D00F47DAC /* SBJsonParser.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = SBJsonParser.m;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/SBJsonParser.m;
-		sourceTree = "<absolute>";
-	};
-	A9A05BB5130D80B800C18FA8 /* JSON.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = JSON.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/JSON.h;
-		sourceTree = "<absolute>";
-	};
-	A9A05BB8130D80B800C18FA8 /* SBJsonWriter.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = SBJsonWriter.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/SBJsonWriter.h;
-		sourceTree = "<absolute>";
-	};
-	A9A05BC0130D80B800C18FA8 /* SBJsonParser.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = SBJsonParser.h;
-		path = /Users/tboetig/Code/xcode/EmbedlyTest/Classes/SBJsonParser.h;
-		sourceTree = "<absolute>";
-	};
-	A9A05BE3130D830200C18FA8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A9A05BB5130D80B800C18FA8 /* JSON.h */;
-		name = "JSON.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1620;
-		vrLoc = 1287;
-	};
-	A9A05BE4130D830200C18FA8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A9A05BB8130D80B800C18FA8 /* SBJsonWriter.h */;
-		name = "SBJsonWriter.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1494;
-		vrLoc = 3363;
+		rLoc = 9223372036854775807;
 	};
 	A9B8FA33130C717900458404 /* EmbedlyTest */ = {
 		isa = PBXExecutable;
@@ -346,36 +256,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	A9C753E713159630007613E4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A9A05BC0130D80B800C18FA8 /* SBJsonParser.h */;
-		name = "SBJsonParser.h: 54";
-		rLen = 12;
-		rLoc = 2399;
-		rType = 0;
-		vrLen = 2487;
-		vrLoc = 0;
-	};
-	A9C753E813159630007613E4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A97DCA6A130F0F7D00F47DAC /* SBJsonParser.m */;
-		name = "SBJsonParser.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1380;
-		vrLoc = 1211;
-	};
-	A9C753F013159B60007613E4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A97DCA67130F0F7D00F47DAC /* SBJsonTokeniser.h */;
-		name = "SBJsonTokeniser.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 2031;
-		vrLoc = 346;
-	};
 	A9D15927130C827C00A5EC26 /* malloc_error_break */ = {
 		isa = PBXSymbolicBreakpoint;
 		actions = (
@@ -387,20 +267,10 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libSystem.B.dylib;
-		modificationTime = 320265059.452702;
+		modificationTime = 320340256.809704;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = malloc_error_break;
-	};
-	A9DCC8801316FCAB0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 370;
-		vrLoc = 0;
 	};
 	A9DCC8B91317014B0071E3BC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -412,46 +282,6 @@
 		vrLen = 962;
 		vrLoc = 274;
 	};
-	A9DCC8BA1317014B0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 229";
-		rLen = 0;
-		rLoc = 7252;
-		rType = 0;
-		vrLen = 730;
-		vrLoc = 6573;
-	};
-	A9DCC8BB1317014B0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 129";
-		rLen = 0;
-		rLoc = 3571;
-		rType = 0;
-		vrLen = 615;
-		vrLoc = 3209;
-	};
-	A9DCC8BC1317014B0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 134";
-		rLen = 0;
-		rLoc = 3845;
-		rType = 0;
-		vrLen = 2127;
-		vrLoc = 3209;
-	};
-	A9DCC8C51317016E0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 127";
-		rLen = 0;
-		rLoc = 3434;
-		rType = 0;
-		vrLen = 2107;
-		vrLoc = 1895;
-	};
 	A9DCC8C6131701D10071E3BC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
@@ -461,65 +291,5 @@
 		rType = 0;
 		vrLen = 2107;
 		vrLoc = 1895;
-	};
-	A9DCC8C7131701D10071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 229";
-		rLen = 0;
-		rLoc = 7252;
-		rType = 0;
-		vrLen = 2264;
-		vrLoc = 6271;
-	};
-	A9DCC8C8131701D10071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 221";
-		rLen = 0;
-		rLoc = 6826;
-		rType = 0;
-		vrLen = 2864;
-		vrLoc = 5284;
-	};
-	A9DCC8CD131701ED0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 221";
-		rLen = 0;
-		rLoc = 6816;
-		rType = 0;
-		vrLen = 2267;
-		vrLoc = 5284;
-	};
-	A9DCC8D0131702550071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 236";
-		rLen = 11;
-		rLoc = 7389;
-		rType = 0;
-		vrLen = 2096;
-		vrLoc = 5795;
-	};
-	A9DCC8D3131703FB0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 239";
-		rLen = 0;
-		rLoc = 7543;
-		rType = 0;
-		vrLen = 2096;
-		vrLoc = 5795;
-	};
-	A9FF83C41315B5D20022C213 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A97DC882130EE7DA00F47DAC /* EmbedlyTestViewResultsController.h */;
-		name = "EmbedlyTestViewResultsController.h: 19";
-		rLen = 0;
-		rLoc = 423;
-		rType = 0;
-		vrLen = 515;
-		vrLoc = 0;
 	};
 }

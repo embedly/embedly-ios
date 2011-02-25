@@ -1,46 +1,22 @@
-embedly
--------
+=============
+ Embedly iOS
+=============
 
 Embedly iOS iPhone/iPad client library.  To find out what Embedly is all about, please visit
 http://embed.ly. To see our API documentation, visit http://api.embed.ly/docs.
 
 Prerequisites
-^^^^^^^^^^^^^
++++++++++++++
 
 * XCode - downloadable from `<http://developer.apple.com/>`_
 * iOS Developer Account
-
+    
 Getting Started
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 Check out the included xcodeproj file. The demo project loads the embedly response into a table view. If
 you do not have a Pro Key, you will be limited to the services we support through `<http://api.embed.ly>`_.
 
-Pro
-^^^
-
-The Embedly iOS Library supports Embedly Pro accounts. If you have a pro key you can initialize the Embedly class
-with the initWithKey method::
-
-    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
-    
-If you do not have a Pro account, you can sign up for one at `Embedly Pro <http://pro.embed.ly>`_.
-
-Choose an Endpoint
-^^^^^^^^^^^^^^^^^^
-
-Our iOS Library supports all three of our endpoints. We recommend checking out how the responses differ between the three 
-over at `Embedly Explore <http://explore.embed.ly>`_. The three endpoints are:
-
-`oEmbed <http://pro.embed.ly/docs/oembed>`_
-    This endpoint works for both Pro and Free accounts. If using with a free account, the responses are
-    limited to the 204 services `listed here <http://api.embed.ly>`_. With a Pro account any URL will work.
-`Objectify <http://pro.embed.ly/docs/objectify>`_
-    This endpoint is only available for Pro Users. It returns every bit of information we can determine about a URL.
-`Preview <http://pro.embed.ly/docs/Preview>`_
-    This endpoint is only available for Pro Users. It returns a curated list of fields we think are most important
-    including images, embeds, videos and descriptions.
-    
 Importing Embedly
 ^^^^^^^^^^^^^^^^^
 
@@ -115,7 +91,31 @@ embedlyDidFailWithError
 embedlyDidReceiveResponse
     This method fires when the response returns but before all the data has been received. This  method maps
     directly to the NSURLConnection delegate method that Embedly receives.
-    
+
+Pro
++++
+
+The Embedly iOS Library supports Embedly Pro accounts. If you have a pro key you can initialize the Embedly class
+with the initWithKey method::
+
+    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
+
+If you do not have a Pro account, you can sign up for one at `Embedly Pro <http://pro.embed.ly>`_.
+
+Choose an Endpoint
+++++++++++++++++++
+
+Our iOS Library supports all three of our endpoints. We recommend checking out how the responses differ between the three 
+over at `Embedly Explore <http://explore.embed.ly>`_. The three endpoints are:
+
+`oEmbed <http://pro.embed.ly/docs/oembed>`_
+    This endpoint works for both Pro and Free accounts. If using with a free account, the responses are
+    limited to the 204 services `listed here <http://api.embed.ly>`_. With a Pro account any URL will work.
+`Objectify <http://pro.embed.ly/docs/objectify>`_
+    This endpoint is only available for Pro Users. It returns every bit of information we can determine about a URL.
+`Preview <http://pro.embed.ly/docs/Preview>`_
+    This endpoint is only available for Pro Users. It returns a curated list of fields we think are most important
+    including images, embeds, videos and descriptions.    
 
 HTML5
 ^^^^^

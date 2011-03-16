@@ -90,6 +90,8 @@
 #pragma mark Instance Methods
 //===========================================================
 - (id)initWithKey:(NSString *)k;
+- (id)initWithKey:(NSString *)k andEndpoint:(NSString *)e;
+- (NSString *)escapeUrlWithString:(NSString *)path;
 - (void)callWithArray:(NSArray *)urls;
 - (void)callWithUrl:(NSString *)url;
 - (void)callEmbedlyWithURL:(NSURL *)url;

@@ -96,6 +96,14 @@
 	[super dealloc];
 }
 
+- (NSString *)escapeUrlWithString:(NSString *)string {
+    return (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                            (CFStringRef) string,
+                                            NULL,
+                                            (CFStringRef) @"!*'();:@&=+$,/?%#[]",
+                                            kCFStringEncodingUTF8);
+}
+
 //===========================================================
 #pragma mark -
 #pragma mark API Access
@@ -103,6 +111,9 @@
 
 // Call the Embedly API with One URL. Will return a Dictionary
 - (void)callWithUrl:(NSString *)url {
+    
+    url = [self escapeUrlWithString:url];
+    
 	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&url=%@", self.path, self.endpoint, url] autorelease];
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
@@ -115,8 +126,7 @@
 	}
 	
 	NSURL* u = [[NSURL alloc] initWithString:request];
-    NSLog(@"%@", u);
-	[self callEmbedlyWithURL:u];
+    [self callEmbedlyWithURL:u];
 	[u release];
 }
 
@@ -125,7 +135,7 @@
 	NSString* set = [[[NSString alloc] initWithString:@""] autorelease];
 	for( NSString *s in urls){
 		set = [set stringByAppendingString:@","];
-		set = [set stringByAppendingString:s];
+		set = [set stringByAppendingString: [self escapeUrlWithString:s]];
 	}
 	set = [set substringFromIndex:1];	// remove the initial , from the url string
 	
@@ -194,6 +204,7 @@
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidLoad:)]) {
 		[self.delegate embedlyDidLoad:result];
 	}
+    NSLog(@"%@", result);
     
     [parser release];
     [self.returnedData release];

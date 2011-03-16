@@ -210,7 +210,7 @@
 			
 			[self.navigationController pushViewController:v animated:YES];
 			[v release];
-		} else if ( [attrName isEqualToString:@"html"] ) {
+		} else if ( [attrName isEqualToString:@"html"] || [attrName isEqualToString:@"html5"] ) {
 			UIViewController *v = [[UIViewController alloc] init];
 			
 			UIWebView *wv = [[UIWebView alloc] init];

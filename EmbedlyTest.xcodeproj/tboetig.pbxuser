@@ -28,11 +28,11 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					20,
-					451,
+					391,
 					20,
-					351,
-					351,
-					279,
+					291,
+					291,
+					219,
 					20,
 				);
 				PBXFileTableDataSourceColumnsKey = (
@@ -52,7 +52,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					1210,
+					969.58349609375,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -87,7 +87,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1282,
+					1042,
 					60,
 					20,
 					48,
@@ -104,74 +104,22 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 320358732;
-			PBXWorkspaceStateSaveDate = 320358732;
+			PBXPerProjectTemplateStateSaveDate = 321204571;
+			PBXWorkspaceStateSaveDate = 321204571;
 		};
 		perUserProjectItems = {
-			A957193A1318494F000AB064 /* PlistBookmark */ = A957193A1318494F000AB064 /* PlistBookmark */;
-			A9571945131849A6000AB064 /* PlistBookmark */ = A9571945131849A6000AB064 /* PlistBookmark */;
-			A9571948131849B0000AB064 /* PlistBookmark */ = A9571948131849B0000AB064 /* PlistBookmark */;
-			A957195313184AB2000AB064 /* PlistBookmark */ = A957195313184AB2000AB064 /* PlistBookmark */;
-			A957195413184ABE000AB064 /* PlistBookmark */ = A957195413184ABE000AB064 /* PlistBookmark */;
-			A96EBB501316DB6100C00201 = A96EBB501316DB6100C00201 /* PBXTextBookmark */;
-			A97D0C4F13180100000000C8 = A97D0C4F13180100000000C8 /* PBXTextBookmark */;
-			A97D0C5013180100000000C8 = A97D0C5013180100000000C8 /* PlistBookmark */;
-			A97D0C5E13180144000000C8 = A97D0C5E13180144000000C8 /* PlistBookmark */;
-			A9DCC8B91317014B0071E3BC = A9DCC8B91317014B0071E3BC /* PBXTextBookmark */;
-			A9DCC8C6131701D10071E3BC = A9DCC8C6131701D10071E3BC /* PBXTextBookmark */;
+			A957195613187F59000AB064 /* PlistBookmark */ = A957195613187F59000AB064 /* PlistBookmark */;
+			A96E466D132533CE0017AE7F /* PBXTextBookmark */ = A96E466D132533CE0017AE7F /* PBXTextBookmark */;
+			A96E466E132533CE0017AE7F /* PBXTextBookmark */ = A96E466E132533CE0017AE7F /* PBXTextBookmark */;
+			A96E466F132533CE0017AE7F /* PBXTextBookmark */ = A96E466F132533CE0017AE7F /* PBXTextBookmark */;
+			A97AB77D1319ACA10026769E /* PBXTextBookmark */ = A97AB77D1319ACA10026769E /* PBXTextBookmark */;
+			A97AB77F1319ACA10026769E /* PBXTextBookmark */ = A97AB77F1319ACA10026769E /* PBXTextBookmark */;
 		};
 		sourceControlManager = A9B8FA4A130C717F00458404 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	A957193A1318494F000AB064 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	A9571945131849A6000AB064 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleExecutable,
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	A9571948131849B0000AB064 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleExecutable,
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	A957195313184AB2000AB064 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleExecutable,
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	A957195413184ABE000AB064 /* PlistBookmark */ = {
+	A957195613187F59000AB064 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
 		fallbackIsa = PBXBookmark;
@@ -181,77 +129,85 @@
 		);
 		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
+	};
+	A96E466D132533CE0017AE7F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
+		name = "Embedly.m: 145";
+		rLen = 16;
+		rLoc = 4214;
+		rType = 0;
+		vrLen = 1857;
+		vrLoc = 2576;
+	};
+	A96E466E132533CE0017AE7F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A96EBB4B1316DB5900C00201 /* Embedly.h */;
+		name = "Embedly.h: 40";
+		rLen = 0;
+		rLoc = 1191;
+		rType = 0;
+		vrLen = 1629;
+		vrLoc = 785;
+	};
+	A96E466F132533CE0017AE7F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A96EBB4B1316DB5900C00201 /* Embedly.h */;
+		name = "Embedly.h: 43";
+		rLen = 17;
+		rLoc = 1306;
+		rType = 0;
+		vrLen = 1629;
+		vrLoc = 785;
 	};
 	A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1260, 1482}}";
 			sepNavSelRange = "{1231, 0}";
-			sepNavVisRange = "{274, 962}";
+			sepNavVisRange = "{1235, 1554}";
 		};
 	};
 	A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1260, 3679}}";
-			sepNavSelRange = "{7543, 0}";
-			sepNavVisRange = "{5949, 1942}";
+			sepNavIntBoundsRect = "{{0, 0}, {1260, 3757}}";
+			sepNavSelRange = "{6633, 14}";
+			sepNavVisRange = "{5051, 2425}";
 		};
 	};
 	A96EBB4B1316DB5900C00201 /* Embedly.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1260, 1378}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 614}";
+			sepNavIntBoundsRect = "{{0, 0}, {1260, 1521}}";
+			sepNavSelRange = "{1306, 17}";
+			sepNavVisRange = "{785, 1629}";
 		};
 	};
 	A96EBB4C1316DB5900C00201 /* Embedly.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1619, 2912}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 459}";
+			sepNavIntBoundsRect = "{{0, 0}, {1260, 3029}}";
+			sepNavSelRange = "{4214, 16}";
+			sepNavVisRange = "{2576, 1857}";
 		};
 	};
-	A96EBB501316DB6100C00201 /* PBXTextBookmark */ = {
+	A97AB77D1319ACA10026769E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = A96EBB4B1316DB5900C00201 /* Embedly.h */;
-		name = "Embedly.h: 1";
+		fRef = A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */;
+		name = "EmbedlyTestViewController.m: 34";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 1231;
 		rType = 0;
-		vrLen = 614;
-		vrLoc = 0;
+		vrLen = 1554;
+		vrLoc = 1235;
 	};
-	A97D0C4F13180100000000C8 /* PBXTextBookmark */ = {
+	A97AB77F1319ACA10026769E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */;
-		name = "EmbedlyTestViewResultsController.m: 239";
-		rLen = 0;
-		rLoc = 7543;
+		name = "EmbedlyTestViewResultsController.m: 218";
+		rLen = 14;
+		rLoc = 6633;
 		rType = 0;
-		vrLen = 1942;
-		vrLoc = 5949;
-	};
-	A97D0C5013180100000000C8 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
-	A97D0C5E13180144000000C8 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* EmbedlyTest-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/tboetig/Code/xcode/EmbedlyTest/EmbedlyTest-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
+		vrLen = 2425;
+		vrLoc = 5051;
 	};
 	A9B8FA33130C717900458404 /* EmbedlyTest */ = {
 		isa = PBXExecutable;
@@ -331,29 +287,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libSystem.B.dylib;
-		modificationTime = 320358834.698263;
+		modificationTime = 320480667.464816;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = malloc_error_break;
-	};
-	A9DCC8B91317014B0071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */;
-		name = "EmbedlyTestViewController.m: 34";
-		rLen = 0;
-		rLoc = 1231;
-		rType = 0;
-		vrLen = 962;
-		vrLoc = 274;
-	};
-	A9DCC8C6131701D10071E3BC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A96EBB4C1316DB5900C00201 /* Embedly.m */;
-		name = "Embedly.m: 127";
-		rLen = 0;
-		rLoc = 3434;
-		rType = 0;
-		vrLen = 2107;
-		vrLoc = 1895;
 	};
 }

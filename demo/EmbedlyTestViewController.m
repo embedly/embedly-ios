@@ -11,28 +11,40 @@
 
 @implementation EmbedlyTestViewController
 
-@synthesize url, submit, endpoint, test;
+@synthesize url, submit, endpoint;
+@synthesize maxWidth, maxHeight, proKey;
 @synthesize embedly;
 
 - (IBAction)submit:(id) sender {
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    if(self.proKey.text != nil){
+        embedly.key = self.proKey.text;
+        embedly.path = kEmbedlyProPath;
+    }
+    
+    if(self.maxHeight.text != nil)
+        embedly.maxHeight = [f numberFromString:self.maxHeight.text];
+    
+    if(self.maxWidth.text != nil)
+        embedly.maxWidth = [f numberFromString:self.maxWidth.text];
+    
 	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
+    NSLog(@"%@", [earray objectAtIndex:[endpoint selectedSegmentIndex]]);
 	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
 	[embedly callWithUrl:url.text];
+    
+    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:HUD];
+    HUD.delegate = self;
+    HUD.labelText = @"Loading";
+    [HUD show:YES];
+    
 	[earray release];
+    [f release];
 }
 
-// Test the Embedly API with Multi-get
-- (IBAction)testMultipleUrls:(id) sender {
-	NSArray *urls = [[NSArray alloc] initWithObjects:@"http://www.youtube.com/watch?v=BfcWraeZvcw",
-													 @"http://www.flickr.com/photos/cybertiesto/336245284/",
-													 @"http://vimeo.com/20187108",
-													 nil];
-	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
-	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
-	[embedly callWithArray:urls];
-	[earray release];
-	[urls release];
-}
 
 
 
@@ -40,10 +52,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	url.delegate = self;
-	embedly = [[Embedly alloc] init];
-	embedly.maxWidth = [NSNumber numberWithInt:400];
+    embedly = [[Embedly alloc] init];
 	embedly.delegate = self;
-	
+    
+    // instantiate the loading graphic
+    
+}
+
+#pragma mark -
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden {
+    // Remove HUD from screen when the HUD was hidded
+    [HUD removeFromSuperview];
+    [HUD release];
 }
 
 
@@ -65,6 +87,8 @@
 		[aController release];
 		return;
 	}
+    [HUD hide:YES];
+    
 	[self.navigationController pushViewController:aController animated:YES];
 	[aController release];
 }
@@ -109,7 +133,9 @@
 	endpoint = nil;
 	url = nil;
 	submit = nil;
-	test = nil;
+    maxWidth = nil;
+    maxHeight = nil;
+    proKey = nil;
 }
 
 
@@ -117,7 +143,9 @@
 	[endpoint release];
 	[url release];
 	[submit release];
-	[test release];
+	[proKey release];
+    [maxWidth release];
+    [maxHeight release];
     [super dealloc];
 }
 

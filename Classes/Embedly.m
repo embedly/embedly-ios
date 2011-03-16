@@ -31,6 +31,7 @@
 @synthesize path;
 @synthesize userAgent;
 @synthesize connection;
+@synthesize returnedData;
 @synthesize delegate;
 @synthesize maxWidth, maxHeight;
 
@@ -44,6 +45,7 @@
 	self.key = nil;
 	self.path = kEmbedlyApiPath;
 	self.userAgent = kEmbedlyDefaultUserAgent;
+    self.returnedData = [[NSMutableData alloc] init];
 	return self;
 }
 
@@ -57,6 +59,9 @@
 	
 	self.endpoint = kEmbedlyOembedEndpoint;		// standard endpoint, oembed works for API and Pro
 	self.userAgent = kEmbedlyDefaultUserAgent;
+    
+    
+    self.returnedData = [[NSMutableData alloc] init];
 	
 	return self;
 }
@@ -75,6 +80,8 @@
 		self.endpoint = e;
 	}
 	self.userAgent = kEmbedlyDefaultUserAgent;
+    
+    self.returnedData = [[NSMutableData alloc] init];
 	
 	return self;
 }
@@ -96,7 +103,7 @@
 
 // Call the Embedly API with One URL. Will return a Dictionary
 - (void)callWithUrl:(NSString *)url {
-	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&url=%@", self.path, kEmbedlyApiVersion, self.endpoint, url] autorelease];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&url=%@", self.path, self.endpoint, url] autorelease];
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
 	}
@@ -104,10 +111,11 @@
 		request = [request stringByAppendingFormat:@"&maxwidth=%@", self.maxWidth];
 	}
 	if (self.maxHeight != nil){
-		request = [request stringByAppendingFormat:@"@maxheight=%@", self.maxHeight];
+		request = [request stringByAppendingFormat:@"&maxheight=%@", self.maxHeight];
 	}
 	
 	NSURL* u = [[NSURL alloc] initWithString:request];
+    NSLog(@"%@", u);
 	[self callEmbedlyWithURL:u];
 	[u release];
 }
@@ -121,7 +129,7 @@
 	}
 	set = [set substringFromIndex:1];	// remove the initial , from the url string
 	
-	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@/%@?mobile=true&urls=%@", self.path, kEmbedlyApiVersion, self.endpoint, set] autorelease];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&urls=%@", self.path, self.endpoint, set] autorelease];
 	
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
@@ -130,7 +138,7 @@
 		request = [request stringByAppendingFormat:@"&maxwidth=%@", self.maxWidth];
 	}
 	if (self.maxHeight != nil){
-		request = [request stringByAppendingFormat:@"@maxheight=%@", self.maxHeight];
+		request = [request stringByAppendingFormat:@"&maxheight=%@", self.maxHeight];
 	}
 	
 	
@@ -152,6 +160,7 @@
 // Cancel a URLConnection
 - (void)stop {
 	[[self connection] cancel];
+    self.returnedData = nil;
 }
 
 
@@ -168,20 +177,26 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	// Push raw data to delegate
-	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidReturnRawData:)]) {
-		[self.delegate embedlyDidReturnRawData:data];
-	}
-	
-	SBJsonParser *parser = [[SBJsonParser alloc] init];
-	id result = [parser objectWithData:data];
-	
-	// Push NSArray or NSDictionary object to delegate
-	if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidLoad:)]) {
+    // concatenate data returned until all data is received
+    [self.returnedData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // return the raw data if a developer wants that instead of a json object
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidReturnRawData:)]){
+        [self.delegate embedlyDidReturnRawData:[self returnedData]];
+    }
+    
+    // return parsed JSON as NSArray or NSDictionary
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+	id result = [parser objectWithData:self.returnedData];
+    
+    if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidLoad:)]) {
 		[self.delegate embedlyDidLoad:result];
 	}
-	
-	[parser release];
+    
+    [parser release];
+    [self.returnedData release];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

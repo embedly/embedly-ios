@@ -30,14 +30,13 @@
 
 
 #define kEmbedlyLibVersion			@"0.1.0"
-#define kEmbedlyApiVersion			@"1"
 #define kEmbedlyApiPath				@"api.embed.ly"
 #define kEmbedlyProPath				@"pro.embed.ly"
 
 
-#define kEmbedlyOembedEndpoint		@"oembed"
-#define kEmbedlyObjectifyEndpoint	@"objectify"
-#define kEmbedlyPreviewEndpoint		@"preview"
+#define kEmbedlyOembedEndpoint		@"1/oembed"
+#define kEmbedlyObjectifyEndpoint	@"2/objectify"
+#define kEmbedlyPreviewEndpoint		@"1/preview"
 
 #define kEmbedlyDefaultUserAgent	@"Mozilla/5.0 (compatible; embedly-ios/0.1.0;)"
 #define kEmbedlyClientHeader		@"Embedly-iOS/0.1.0"
@@ -54,6 +53,7 @@
 	NSString *userAgent;
 	NSNumber *maxHeight;
 	NSNumber *maxWidth;
+    NSMutableData *returnedData;
 	NSURLConnection *connection;
 	
 	// the delegate
@@ -70,6 +70,7 @@
 @property (nonatomic, retain) NSString *userAgent;
 @property (nonatomic, retain) NSNumber *maxHeight;
 @property (nonatomic, retain) NSNumber *maxWidth;
+@property (nonatomic, retain) NSMutableData *returnedData;
 
 @property (nonatomic, retain) NSURLConnection *connection;
 
@@ -88,6 +89,7 @@
 #pragma mark -
 #pragma mark Instance Methods
 //===========================================================
+- (id)initWithKey:(NSString *)k;
 - (void)callWithArray:(NSArray *)urls;
 - (void)callWithUrl:(NSString *)url;
 - (void)callEmbedlyWithURL:(NSURL *)url;

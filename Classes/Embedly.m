@@ -115,7 +115,7 @@
     url = [self escapeUrlWithString:url];
     
 	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&url=%@", self.path, self.endpoint, url] autorelease];
-	if( self.key != nil){
+    if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
 	}
 	if (self.maxWidth != nil){
@@ -201,17 +201,29 @@
     SBJsonParser *parser = [[SBJsonParser alloc] init];
 	id result = [parser objectWithData:self.returnedData];
     
+    
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidLoad:)]) {
 		[self.delegate embedlyDidLoad:result];
 	}
-    NSLog(@"%@", result);
     
     [parser release];
     [self.returnedData release];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidReceiveResponse:)]) {
+    int statusCode = [(NSHTTPURLResponse *)response statusCode];
+    if (statusCode >= 400){
+        [connection cancel];
+        NSDictionary *errorInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:NSLocalizedString(@"Server returned status code: %d",@""), statusCode] 
+                                                              forKey:NSLocalizedDescriptionKey];
+        
+        NSError *statusError = [NSError errorWithDomain:self.path
+                                                   code:statusCode
+                                               userInfo:errorInfo]; 
+        
+        [self connection:connection didFailWithError:statusError];
+    }
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidReceiveResponse:)]) {
 		[self.delegate embedlyDidReceiveResponse:response];
 	}
 }

@@ -7,6 +7,7 @@
 //
 
 #import "EmbedlyTestViewResultsController.h"
+#import "EmbedlyHtmlViewController.h"
 
 
 @implementation EmbedlyTestViewResultsController
@@ -65,11 +66,12 @@
     [super viewWillDisappear:animated];
 }
 */
-/*
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    
 }
-*/
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -211,14 +213,10 @@
 			[self.navigationController pushViewController:v animated:YES];
 			[v release];
 		} else if ( [attrName isEqualToString:@"html"] || [attrName isEqualToString:@"html5"] ) {
-			UIViewController *v = [[UIViewController alloc] init];
-			
-			UIWebView *wv = [[UIWebView alloc] init];
-			
-			[wv loadHTMLString:[obj objectForKey:attrName] baseURL:[NSURL URLWithString:@"http://embed.ly"]];
-			 v.view = wv;
+			EmbedlyHtmlViewController *v = [[EmbedlyHtmlViewController alloc] initWithNibName:@"EmbedlyHtmlViewController" bundle:nil];
+			v.html = [obj objectForKey:attrName];
 			[self.navigationController pushViewController:v animated:YES];
-			[wv release];
+            
 			[v release];
 		} else if ( [attrName isEqualToString:@"images"] ){
 			NSLog(@"Image Display");
@@ -278,6 +276,7 @@
 	keys = nil;
 	obj = nil;
 	objArray = nil;
+    [[self tableView] reloadData];
 }
 
 

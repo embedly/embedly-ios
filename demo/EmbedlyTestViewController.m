@@ -19,7 +19,7 @@
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     
-    if(self.proKey.text != nil){
+    if(![self.proKey.text isEqualToString:@""]){
         embedly.key = self.proKey.text;
         embedly.path = kEmbedlyProPath;
     }
@@ -87,7 +87,6 @@
 		[aController release];
 		return;
 	}
-    [HUD hide:YES];
     
 	[self.navigationController pushViewController:aController animated:YES];
 	[aController release];
@@ -98,11 +97,12 @@
 }
 
 - (void)embedlyDidFailWithError:(NSError *)error {
-	NSLog(@"Embedly did Receive an Error");
+	NSLog(@"Embedly did Receive an Error: %@", error);
 }
 
 - (void)embedlyDidReceiveResponse:(NSURLResponse *)response {
 	NSLog(@"Embedly did Receive a Response");
+    [HUD hide:YES];
 }
 
 

@@ -123,16 +123,59 @@ over at `Embedly Explore <http://explore.embed.ly>`_. The three endpoints are:
 HTML5
 ^^^^^
 
-Embedly supports HTML5 as it is available. That said only a handful of our video providers are currently supporting HTML5 Video.
-That list is growing, but developers should bear in mind the limitations iOS faces with flash video. Our current list of HTML5
-supporters:
+Embedly supports HTML5 as it is available. We currently support about 20 video and audio providers with HTML5.
+That list will continue to grow, but developers should bear in mind the limitations iOS faces with flash video. Our current list of HTML5
+supporters: 
 
-* Youtube
+* Youtube.com
 * Whitehouse.gov
 * Ted.com
-* Posterous
-* FunnyOrDie
-* Flickr
-* Confreaks
-* Vimeo
-* Crocodoc
+* Scribd.com
+* Vimeo.com
+* Dipdive.com
+* Edition.cnn.com
+* Posterous.com
+* FunnyOrDie.com
+* Blip.tv
+* BigThink.com
+* Ustream.com
+* Qik.com
+* Digg.com
+* Revision3.com
+* Bambuser.com
+* Socialcam.com
+* Twitvid.com
+* Confreaks.net
+* Bandcamp.com
+* Huffduffer.com
+
+Test Links
+^^^^^^^^^^
+
+ - http://bambuser.com/channel/Spectrial/broadcast/114361
+ - http://www.ustream.tv/sfshiba
+ - http://bigthink.com/ideas/25129
+ - http://dailydips.dipdive.com/media/162456
+ - http://www.whitehouse.gov/photos-and-video/video/2010/10/19/educational-excellence-hispanic-americans
+ - http://edition.cnn.com/video/#/video/tech/2011/02/24/ns.google.vp.page.cerf.cnn
+ - http://www.ted.com/talks/lang/por_br/blaise_aguera.html
+ - http://www.funnyordie.com/videos/356fc66a37/yoo-are-don-draper
+ - http://www.funnyordie.com/videos/afcb7455c2/flight-of-the-conchords-issues-think-about-it-from-flight-of-the-conchords
+ - http://confreaks.net/videos/431-rubyconf2010-keynote-why-ruby
+ - http://tv.digg.com/diggnation/goingpublic/new-years-resolutions
+ - http://socialcam.com/v/nI7vbp9x
+ - http://gist.github.com/636842
+ - http://wesingyourtweets.posterous.com/re-sweet-rachieuk
+ - http://revision3.com/scientifictuesdays/scientifictuesdays-14
+ - http://linuxconfau.blip.tv/file/4851926/
+ - http://www.twitvid.com/K1AB6
+ - http://www.youtube.com/watch?v=J---aiyznGQ (Weird transition to quicktime player)
+ - http://vimeo.com/20297172
+ - http://huffduffer.com/robotjohnny/31937
+ - http://www.scribd.com/doc/51084126/Gouged-at-the-pumps-again
+ - http://tiawittapmuzik.bandcamp.com/
+ - http://danielaandbenspector.bandcamp.com/track/cut-it-out-ft-m-jack-bee
+ - http://foursquare.com/poplicola_jp/checkin/4d6b1bf79f4b6dcba3a86c28?s=1konKLXLyFsLhP2vzPWcgS84wy0
+ - http://www.amazon.com/My-World-2-0-Justin-Bieber/dp/B0037AGASG
+ - http://www.google.com/buzz/tom.boetig
+ - http://www.meetup.com/Massimo-Brunos-Italian-Supper-Club/

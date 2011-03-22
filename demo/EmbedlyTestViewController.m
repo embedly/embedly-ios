@@ -21,7 +21,6 @@
     
     if(![self.proKey.text isEqualToString:@""]){
         embedly.key = self.proKey.text;
-        embedly.path = kEmbedlyProPath;
     }
     
     if(self.maxHeight.text != nil)

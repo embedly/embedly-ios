@@ -28,7 +28,6 @@
 //===========================================================
 @synthesize key;
 @synthesize endpoint;
-@synthesize path;
 @synthesize userAgent;
 @synthesize connection;
 @synthesize returnedData;
@@ -43,7 +42,6 @@
 
 - (id)init {
 	self.key = nil;
-	self.path = kEmbedlyApiPath;
 	self.userAgent = kEmbedlyDefaultUserAgent;
     self.returnedData = [[NSMutableData alloc] init];
 	return self;
@@ -51,11 +49,6 @@
 
 - (id)initWithKey:(NSString *)k {
 	self.key = k;
-	if (self.key != nil){
-		self.path = kEmbedlyProPath;
-	} else {
-		self.path = kEmbedlyApiPath;
-	}
 	
 	self.endpoint = kEmbedlyOembedEndpoint;		// standard endpoint, oembed works for API and Pro
 	self.userAgent = kEmbedlyDefaultUserAgent;
@@ -68,11 +61,6 @@
 
 - (id)initWithKey:(NSString *)k andEndpoint:(NSString *)e {
 	self.key = k;
-	if (self.key != nil){
-		self.path = kEmbedlyProPath;
-	} else {
-		self.path = kEmbedlyApiPath;
-	}
 	
 	if( self.key == nil){
 		self.endpoint = kEmbedlyOembedEndpoint;
@@ -89,7 +77,6 @@
 - (void)dealloc {
 	[key release], key = nil;
 	[endpoint release], endpoint = nil;
-	[path release], path = nil;
 	[userAgent release], userAgent = nil;
 	
 	delegate = nil;
@@ -114,7 +101,7 @@
     
     url = [self escapeUrlWithString:url];
     
-	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&url=%@", self.path, self.endpoint, url] autorelease];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&url=%@", kEmbedlyProPath, self.endpoint, url] autorelease];
     if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
 	}
@@ -139,7 +126,7 @@
 	}
 	set = [set substringFromIndex:1];	// remove the initial , from the url string
 	
-	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&urls=%@", self.path, self.endpoint, set] autorelease];
+	NSString* request = [[[NSString alloc] initWithFormat:@"http://%@/%@?&urls=%@", kEmbedlyProPath, self.endpoint, set] autorelease];
 	
 	if( self.key != nil){
 		request = [request stringByAppendingFormat:@"&key=%@", self.key];
@@ -217,7 +204,7 @@
         NSDictionary *errorInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:NSLocalizedString(@"Server returned status code: %d",@""), statusCode] 
                                                               forKey:NSLocalizedDescriptionKey];
         
-        NSError *statusError = [NSError errorWithDomain:self.path
+        NSError *statusError = [NSError errorWithDomain:kEmbedlyProPath
                                                    code:statusCode
                                                userInfo:errorInfo]; 
         

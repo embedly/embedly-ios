@@ -29,7 +29,6 @@
 		A96EBB491316DB4500C00201 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB3F1316DB4500C00201 /* SBJsonTokeniser.m */; };
 		A96EBB4A1316DB4500C00201 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB411316DB4500C00201 /* SBJsonWriter.m */; };
 		A96EBB4D1316DB5900C00201 /* Embedly.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB4C1316DB5900C00201 /* Embedly.m */; };
-		A97D0C4A131800E6000000C8 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A97D0C49131800E6000000C8 /* icon114x114.png */; };
 		A987BBA813312A130026ADD3 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A987BBA713312A130026ADD3 /* icon114x114.png */; };
 		A987BBAA13312A5D0026ADD3 /* icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A987BBA913312A5D0026ADD3 /* icon57x57.png */; };
 /* End PBXBuildFile section */
@@ -76,7 +75,6 @@
 		A96EBB411316DB4500C00201 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/SBJsonWriter.m"; sourceTree = "<group>"; };
 		A96EBB4B1316DB5900C00201 /* Embedly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Embedly.h; sourceTree = "<group>"; };
 		A96EBB4C1316DB5900C00201 /* Embedly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Embedly.m; sourceTree = "<group>"; };
-		A97D0C49131800E6000000C8 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114x114.png; path = assets/icon114x114.png; sourceTree = "<group>"; };
 		A987BBA713312A130026ADD3 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114x114.png; sourceTree = "<group>"; };
 		A987BBA913312A5D0026ADD3 /* icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57x57.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +169,6 @@
 		A957194213184968000AB064 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A97D0C49131800E6000000C8 /* icon114x114.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -269,7 +266,6 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* EmbedlyTestViewController.xib in Resources */,
-				A97D0C4A131800E6000000C8 /* icon114x114.png in Resources */,
 				A987BBA813312A130026ADD3 /* icon114x114.png in Resources */,
 				A987BBAA13312A5D0026ADD3 /* icon57x57.png in Resources */,
 				A9022FEB1331408C00BD4BBE /* EmbedlyHtmlViewController.xib in Resources */,
@@ -338,7 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -352,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

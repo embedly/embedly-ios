@@ -30,7 +30,6 @@
 
 
 #define kEmbedlyLibVersion			@"0.1.0"
-#define kEmbedlyApiPath				@"api.embed.ly"
 #define kEmbedlyProPath				@"pro.embed.ly"
 
 
@@ -49,7 +48,6 @@
 @interface Embedly : NSObject {
 	NSString *key;
 	NSString *endpoint;
-	NSString *path;
 	NSString *userAgent;
 	NSNumber *maxHeight;
 	NSNumber *maxWidth;
@@ -66,7 +64,6 @@
 //===========================================================
 @property (nonatomic, retain) NSString *key;
 @property (nonatomic, retain) NSString *endpoint;
-@property (nonatomic, retain) NSString *path;
 @property (nonatomic, retain) NSString *userAgent;
 @property (nonatomic, retain) NSNumber *maxHeight;
 @property (nonatomic, retain) NSNumber *maxWidth;

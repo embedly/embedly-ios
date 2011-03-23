@@ -2,20 +2,22 @@
  Embedly iOS
 =============
 
-Embedly iOS iPhone/iPad client library.  To find out what Embedly is all about, please visit
-http://embed.ly. To see our API documentation, visit http://api.embed.ly/docs.
+Embedly iOS iPhone/iPad client library. To find out what Embedly is all about, please visit
+http://embed.ly. To see our documentation, visit http://pro.embed.ly/docs.
 
 Prerequisites
 +++++++++++++
 
 * XCode - downloadable from `<http://developer.apple.com/>`_
 * iOS Developer Account
+* Embedly Pro Account, available at `Embedly Pro <http://pro.embed.ly>`_
     
 Getting Started
 +++++++++++++++
 
-Check out the included xcodeproj file. The demo project loads the embedly response into a table view. If
-you do not have a Pro Key, you will be limited to the services we support through `<http://api.embed.ly>`_.
+Check out the included xcodeproj file. The demo project loads the embedly response into a table view. An
+Embedly Pro key is required for the demo project to load anything. You can sign up for a Pro account at
+`Embedly Pro <http://pro.embed.ly>`_.
 
 Importing Embedly
 ^^^^^^^^^^^^^^^^^
@@ -25,6 +27,8 @@ Importing Embedly
 * Select the Embedly.h and Embedly.m files and continue
 * Do not select "Copy items into destination group's folder". This will make updating the Embedly code easier
 * Click Add
+* You should repeat these steps for the JSON-framework classes included in the project as well. Documentation
+  for JSON-framework is available on `GitHub <http://stig.github.com/json-framework/>`_
 
 
 Initializing Embedly
@@ -42,7 +46,7 @@ Initializing Embedly
     // Alternatively if you are an Embedly Pro User and know what endpoint you want to use
     Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere" andEndpoint:@"preview"];
 
-* Call the Embedly API with a URL String or array of URLs::
+* Call Embedly with a URL String or array of URLs::
     
     // one URL 
     NSString *url = [[NSString alloc] initWithString:@"http://www.youtube.com/watch?v=PKC_ORM0vpo"];
@@ -54,8 +58,8 @@ Initializing Embedly
                                                      nil];
     [embedly callWithArray:urls];
 
-* Embedly returns a JSON String. The iOS json-framework is included with the Embedly Demo project here. 
-  Read more about the json-framework hosted in `Google Code <http://code.google.com/p/json-framework/>`_.
+* Embedly returns a JSON String. The iOS JSON-framework is included with the Embedly Demo project. 
+  Read more about the JSON-framework hosted on `GitHub <http://stig.github.com/json-framework/>`_.
   
 
 Delegate
@@ -98,7 +102,7 @@ embedlyDidReceiveResponse
 Pro
 +++
 
-The Embedly iOS Library supports Embedly Pro accounts. If you have a pro key you can initialize the Embedly class
+The Embedly iOS Library requires an Embedly Pro account. With your Pro Key you can initialize the Embedly class
 with the initWithKey method::
 
     Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
@@ -112,12 +116,11 @@ Our iOS Library supports all three of our endpoints. We recommend checking out h
 over at `Embedly Explore <http://explore.embed.ly>`_. The three endpoints are:
 
 `oEmbed <http://pro.embed.ly/docs/oembed>`_
-    This endpoint works for both Pro and Free accounts. If using with a free account, the responses are
-    limited to the 204 services `listed here <http://api.embed.ly>`_. With a Pro account any URL will work.
+    This endpoint follows the oEmbed standard.
 `Objectify <http://pro.embed.ly/docs/objectify>`_
-    This endpoint is only available for Pro Users. It returns every bit of information we can determine about a URL.
+    This endpoint returns every bit of information we can determine about a URL.
 `Preview <http://pro.embed.ly/docs/Preview>`_
-    This endpoint is only available for Pro Users. It returns a curated list of fields we think are most important
+    This endpoint returns a curated list of fields we think are most important
     including images, embeds, videos and descriptions.    
 
 HTML5

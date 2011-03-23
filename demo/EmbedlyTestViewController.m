@@ -21,7 +21,7 @@
     
     if(![self.proKey.text isEqualToString:@""]){
         embedly.key = self.proKey.text;
-    }
+    } 
     
     if(self.maxHeight.text != nil)
         embedly.maxHeight = [f numberFromString:self.maxHeight.text];
@@ -53,6 +53,7 @@
 	url.delegate = self;
     embedly = [[Embedly alloc] init];
 	embedly.delegate = self;
+    [self.submit setEnabled:NO];
     
     // instantiate the loading graphic
     
@@ -114,6 +115,8 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if([textField isEqual:[self proKey]] && ![[self.proKey text] isEqualToString:@""])
+        [submit setEnabled:YES];
     [textField resignFirstResponder];
     return YES;
 }

@@ -29,7 +29,7 @@
 @synthesize key;
 @synthesize endpoint;
 @synthesize userAgent;
-@synthesize connection;
+@synthesize con;
 @synthesize returnedData;
 @synthesize delegate;
 @synthesize maxWidth, maxHeight;
@@ -149,14 +149,14 @@
 	[request setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
 	[request addValue:kEmbedlyClientHeader forHTTPHeaderField:@"X-Embedly-Client"];
 	NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	self.connection = c;
+	self.con = c;
 	[c release];
 }
 
 
 // Cancel a URLConnection
 - (void)stop {
-	[[self connection] cancel];
+	[[self con] cancel];
     self.returnedData = nil;
 }
 
@@ -208,7 +208,7 @@
                                                    code:statusCode
                                                userInfo:errorInfo]; 
         
-        [self connection:connection didFailWithError:statusError];
+        [self connection:con didFailWithError:statusError];
     }
     if (self.delegate != nil && [self.delegate respondsToSelector:@selector(embedlyDidReceiveResponse:)]) {
 		[self.delegate embedlyDidReceiveResponse:response];

@@ -52,7 +52,7 @@
 	NSNumber *maxHeight;
 	NSNumber *maxWidth;
     NSMutableData *returnedData;
-	NSURLConnection *connection;
+	NSURLConnection *con;
 	
 	// the delegate
 	id<EmbedlyDelegate> delegate;
@@ -69,7 +69,7 @@
 @property (nonatomic, retain) NSNumber *maxWidth;
 @property (nonatomic, retain) NSMutableData *returnedData;
 
-@property (nonatomic, retain) NSURLConnection *connection;
+@property (nonatomic, retain) NSURLConnection *con;
 
 @property (nonatomic, assign) id<EmbedlyDelegate> delegate;
 

@@ -16,9 +16,13 @@
 		A9022FEA1331408C00BD4BBE /* EmbedlyHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9022FE81331408C00BD4BBE /* EmbedlyHtmlViewController.m */; };
 		A9022FEB1331408C00BD4BBE /* EmbedlyHtmlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9022FE91331408C00BD4BBE /* EmbedlyHtmlViewController.xib */; };
 		A9022FEE13315CCB00BD4BBE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9022FED13315CCB00BD4BBE /* MBProgressHUD.m */; };
+		A936EA06133A45C7006FD44F /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = A936EA02133A45C7006FD44F /* btn.png */; };
+		A936EA07133A45C7006FD44F /* btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A936EA03133A45C7006FD44F /* btn@2x.png */; };
+		A936EA08133A45C7006FD44F /* btnDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = A936EA04133A45C7006FD44F /* btnDisabled.png */; };
+		A936EA09133A45C7006FD44F /* btnDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A936EA05133A45C7006FD44F /* btnDisabled@2x.png */; };
+		A936EA0C133A4768006FD44F /* EmbedlyTestViewResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A936EA0B133A4768006FD44F /* EmbedlyTestViewResultsController.m */; };
 		A96EBB291316DB0E00C00201 /* EmbedlyTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB211316DB0E00C00201 /* EmbedlyTestAppDelegate.m */; };
 		A96EBB2C1316DB0E00C00201 /* EmbedlyTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */; };
-		A96EBB2D1316DB0E00C00201 /* EmbedlyTestViewResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */; };
 		A96EBB421316DB4500C00201 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB311316DB4500C00201 /* NSObject+JSON.m */; };
 		A96EBB431316DB4500C00201 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB331316DB4500C00201 /* SBJsonParser.m */; };
 		A96EBB441316DB4500C00201 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A96EBB351316DB4500C00201 /* SBJsonStreamParser.m */; };
@@ -48,12 +52,16 @@
 		A9022FE91331408C00BD4BBE /* EmbedlyHtmlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmbedlyHtmlViewController.xib; path = demo/EmbedlyHtmlViewController.xib; sourceTree = SOURCE_ROOT; };
 		A9022FEC13315CCB00BD4BBE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = demo/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		A9022FED13315CCB00BD4BBE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = demo/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		A936EA02133A45C7006FD44F /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn.png; path = demo/btn.png; sourceTree = "<group>"; };
+		A936EA03133A45C7006FD44F /* btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn@2x.png"; path = "demo/btn@2x.png"; sourceTree = "<group>"; };
+		A936EA04133A45C7006FD44F /* btnDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnDisabled.png; path = demo/btnDisabled.png; sourceTree = "<group>"; };
+		A936EA05133A45C7006FD44F /* btnDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btnDisabled@2x.png"; path = "demo/btnDisabled@2x.png"; sourceTree = "<group>"; };
+		A936EA0A133A4768006FD44F /* EmbedlyTestViewResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmbedlyTestViewResultsController.h; path = demo/EmbedlyTestViewResultsController.h; sourceTree = SOURCE_ROOT; };
+		A936EA0B133A4768006FD44F /* EmbedlyTestViewResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmbedlyTestViewResultsController.m; path = demo/EmbedlyTestViewResultsController.m; sourceTree = SOURCE_ROOT; };
 		A96EBB201316DB0E00C00201 /* EmbedlyTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmbedlyTestAppDelegate.h; path = demo/EmbedlyTestAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A96EBB211316DB0E00C00201 /* EmbedlyTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmbedlyTestAppDelegate.m; path = demo/EmbedlyTestAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A96EBB251316DB0E00C00201 /* EmbedlyTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmbedlyTestViewController.h; path = demo/EmbedlyTestViewController.h; sourceTree = SOURCE_ROOT; };
 		A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmbedlyTestViewController.m; path = demo/EmbedlyTestViewController.m; sourceTree = SOURCE_ROOT; };
-		A96EBB271316DB0E00C00201 /* EmbedlyTestViewResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmbedlyTestViewResultsController.h; path = demo/EmbedlyTestViewResultsController.h; sourceTree = SOURCE_ROOT; };
-		A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmbedlyTestViewResultsController.m; path = demo/EmbedlyTestViewResultsController.m; sourceTree = SOURCE_ROOT; };
 		A96EBB2F1316DB4500C00201 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "json-framework/JSON.h"; sourceTree = "<group>"; };
 		A96EBB301316DB4500C00201 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JSON.h"; path = "json-framework/NSObject+JSON.h"; sourceTree = "<group>"; };
 		A96EBB311316DB4500C00201 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JSON.m"; path = "json-framework/NSObject+JSON.m"; sourceTree = "<group>"; };
@@ -169,6 +177,10 @@
 		A957194213184968000AB064 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A936EA02133A45C7006FD44F /* btn.png */,
+				A936EA03133A45C7006FD44F /* btn@2x.png */,
+				A936EA04133A45C7006FD44F /* btnDisabled.png */,
+				A936EA05133A45C7006FD44F /* btnDisabled@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -181,10 +193,10 @@
 				A96EBB211316DB0E00C00201 /* EmbedlyTestAppDelegate.m */,
 				A96EBB251316DB0E00C00201 /* EmbedlyTestViewController.h */,
 				A96EBB261316DB0E00C00201 /* EmbedlyTestViewController.m */,
-				A96EBB271316DB0E00C00201 /* EmbedlyTestViewResultsController.h */,
-				A96EBB281316DB0E00C00201 /* EmbedlyTestViewResultsController.m */,
 				A9022FE71331408C00BD4BBE /* EmbedlyHtmlViewController.h */,
 				A9022FE81331408C00BD4BBE /* EmbedlyHtmlViewController.m */,
+				A936EA0A133A4768006FD44F /* EmbedlyTestViewResultsController.h */,
+				A936EA0B133A4768006FD44F /* EmbedlyTestViewResultsController.m */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
@@ -269,6 +281,10 @@
 				A987BBA813312A130026ADD3 /* icon114x114.png in Resources */,
 				A987BBAA13312A5D0026ADD3 /* icon57x57.png in Resources */,
 				A9022FEB1331408C00BD4BBE /* EmbedlyHtmlViewController.xib in Resources */,
+				A936EA06133A45C7006FD44F /* btn.png in Resources */,
+				A936EA07133A45C7006FD44F /* btn@2x.png in Resources */,
+				A936EA08133A45C7006FD44F /* btnDisabled.png in Resources */,
+				A936EA09133A45C7006FD44F /* btnDisabled@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +298,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				A96EBB291316DB0E00C00201 /* EmbedlyTestAppDelegate.m in Sources */,
 				A96EBB2C1316DB0E00C00201 /* EmbedlyTestViewController.m in Sources */,
-				A96EBB2D1316DB0E00C00201 /* EmbedlyTestViewResultsController.m in Sources */,
 				A96EBB421316DB4500C00201 /* NSObject+JSON.m in Sources */,
 				A96EBB431316DB4500C00201 /* SBJsonParser.m in Sources */,
 				A96EBB441316DB4500C00201 /* SBJsonStreamParser.m in Sources */,
@@ -295,6 +310,7 @@
 				A96EBB4D1316DB5900C00201 /* Embedly.m in Sources */,
 				A9022FEA1331408C00BD4BBE /* EmbedlyHtmlViewController.m in Sources */,
 				A9022FEE13315CCB00BD4BBE /* MBProgressHUD.m in Sources */,
+				A936EA0C133A4768006FD44F /* EmbedlyTestViewResultsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

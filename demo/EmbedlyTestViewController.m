@@ -32,7 +32,7 @@
 	NSArray *earray = [[NSArray alloc] initWithObjects:kEmbedlyOembedEndpoint, kEmbedlyObjectifyEndpoint, kEmbedlyPreviewEndpoint, nil];
     NSLog(@"%@", [earray objectAtIndex:[endpoint selectedSegmentIndex]]);
 	[embedly setEndpoint:[earray objectAtIndex:[endpoint selectedSegmentIndex]]];
-	[embedly callWithUrl:url.text];
+    [embedly callWithUrl:url.text];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     [self.navigationController.view addSubview:HUD];

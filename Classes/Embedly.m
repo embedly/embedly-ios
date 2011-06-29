@@ -27,8 +27,8 @@
 #pragma mark Synthesizing
 //===========================================================
 @synthesize key;
-@synthesize endpoint;
 @synthesize userAgent;
+@synthesize endpoint;
 @synthesize con;
 @synthesize returnedData;
 @synthesize delegate;
@@ -50,7 +50,7 @@
 - (id)initWithKey:(NSString *)k {
 	self.key = k;
 	
-	self.endpoint = kEmbedlyOembedEndpoint;		// standard endpoint, oembed works for API and Pro
+	self.endpoint = kEmbedlyOembedEndpoint;		
 	self.userAgent = kEmbedlyDefaultUserAgent;
     
     
@@ -65,7 +65,17 @@
 	if( self.key == nil){
 		self.endpoint = kEmbedlyOembedEndpoint;
 	} else {
-		self.endpoint = e;
+		NSString *u = [[NSString alloc] initWithString:[e lowercaseString]];
+        if ([u isEqualToString:@"preview"]){
+            self.endpoint = kEmbedlyPreviewEndpoint;
+        } else if ([u isEqualToString:@"objectify"]){
+            self.endpoint = kEmbedlyObjectifyEndpoint;
+        } else if ([u isEqualToString:@"oembed"]){
+            self.endpoint = kEmbedlyOembedEndpoint;
+        } else {
+            self.endpoint = e;
+        }
+        [u release];
 	}
 	self.userAgent = kEmbedlyDefaultUserAgent;
     
@@ -73,6 +83,8 @@
 	
 	return self;
 }
+
+
 
 - (void)dealloc {
 	[key release], key = nil;
@@ -84,11 +96,11 @@
 }
 
 - (NSString *)escapeUrlWithString:(NSString *)string {
-    return (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+    return [(NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
                                             (CFStringRef) string,
                                             NULL,
                                             (CFStringRef) @"!*'();:@&=+$,/?%#[]",
-                                            kCFStringEncodingUTF8);
+                                            kCFStringEncodingUTF8) autorelease];
 }
 
 //===========================================================
@@ -152,6 +164,7 @@
 	self.con = c;
 	[c release];
 }
+
 
 
 // Cancel a URLConnection

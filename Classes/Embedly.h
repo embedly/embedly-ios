@@ -29,16 +29,16 @@
 //===========================================================
 
 
-#define kEmbedlyLibVersion			@"0.1.0"
-#define kEmbedlyProPath				@"pro.embed.ly"
+#define kEmbedlyLibVersion			@"0.1.1"
+#define kEmbedlyProPath				@"api.embed.ly"
 
 
 #define kEmbedlyOembedEndpoint		@"1/oembed"
 #define kEmbedlyObjectifyEndpoint	@"2/objectify"
 #define kEmbedlyPreviewEndpoint		@"1/preview"
 
-#define kEmbedlyDefaultUserAgent	@"Mozilla/5.0 (compatible; embedly-ios/0.1.0;)"
-#define kEmbedlyClientHeader		@"Embedly-iOS/0.1.0"
+#define kEmbedlyDefaultUserAgent	@"Mozilla/5.0 (compatible; embedly-ios/0.1.1;)"
+#define kEmbedlyClientHeader		@"Embedly-iOS/0.1.1"
 
 //===========================================================
 #pragma mark -
@@ -63,7 +63,7 @@
 #pragma mark Properties
 //===========================================================
 @property (nonatomic, retain) NSString *key;
-@property (nonatomic, retain) NSString *endpoint;
+@property (nonatomic, assign) NSString *endpoint;
 @property (nonatomic, retain) NSString *userAgent;
 @property (nonatomic, retain) NSNumber *maxHeight;
 @property (nonatomic, retain) NSNumber *maxWidth;

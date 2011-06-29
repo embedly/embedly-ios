@@ -3,21 +3,21 @@
 =============
 
 Embedly iOS iPhone/iPad client library. To find out what Embedly is all about, please visit
-http://embed.ly. To see our documentation, visit http://pro.embed.ly/docs.
+http://embed.ly. To see our documentation, visit http://embed.ly/docs.
 
 Prerequisites
 +++++++++++++
 
 * XCode - downloadable from `<http://developer.apple.com/>`_
 * iOS Developer Account
-* Embedly Pro Account, available at `Embedly Pro <http://pro.embed.ly>`_
+* Embedly Key, available at `Embedly <http://embed.ly/pricing>`_
     
 Getting Started
 +++++++++++++++
 
-Check out the included xcodeproj file. The demo project loads the embedly response into a table view. An
-Embedly Pro key is required for the demo project to load anything. You can sign up for a Pro account at
-`Embedly Pro <http://pro.embed.ly>`_.
+Check out the included xcodeproj file. The demo project loads the Embedly response into a table view. An
+Embedly key is required for the demo project to load anything. You can sign up for a Pro account at
+`Embedly <http://embed.ly/pricing>`_.
 
 Importing Embedly
 ^^^^^^^^^^^^^^^^^
@@ -44,7 +44,7 @@ Initializing Embedly
     Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
 
     // Alternatively if you are an Embedly Pro User and know what endpoint you want to use
-    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere" andEndpoint:@"preview"];
+    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere" andEndpoint:@"1/preview"];
 
 * Call Embedly with a URL String or array of URLs::
     
@@ -89,25 +89,25 @@ embedlyDidLoad
     This method receives either an NSDictionary or NSArray, depending on whether one or 
     multiple URLs were passed to Embedly. You can use [result isKindOfClass:[NSArray class]]
     to determine what the object should be cast as. The NSDictionary allows you to access
-    parameters by key, you can see what keys are returned in our `documentation <http://pro.embed.ly/docs>`_.
+    parameters by key, you can see what keys are returned in our `documentation <http://embed.ly/docs>`_.
 
 embedlyDidFailWithError
     Method returns if there's a problem accessing the API. This is not what gets returned from
-    the API if a given URL is invalid. That is handled in a JSON object defined `here <https://pro.embed.ly/docs/oembed#error-codes>`_.
+    the API if a given URL is invalid. That is handled in a JSON object defined `here <https://embed.ly/docs/endpoints/1/oembed#error-codes>`_.
 
 embedlyDidReceiveResponse
     This method fires when the response returns but before all the data has been received. This  method maps
     directly to the NSURLConnection delegate method that Embedly receives.
 
-Pro
+Keys
 +++
 
-The Embedly iOS Library requires an Embedly Pro account. With your Pro Key you can initialize the Embedly class
+The Embedly iOS Library requires an Embedly Key. With your Embedly Key you can initialize the Embedly class
 with the initWithKey method::
 
-    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourProKeyHere"];
+    Embedly *embedly = [[Embedly alloc] initWithKey:@"yourKeyHere"];
 
-If you do not have a Pro account, you can sign up for one at `Embedly Pro <http://pro.embed.ly>`_.
+If you do not have a key, you can sign up for one at `Embedly <http://embed.ly/pricing>`_.
 
 Choose an Endpoint
 ++++++++++++++++++
@@ -115,11 +115,11 @@ Choose an Endpoint
 Our iOS Library supports all three of our endpoints. We recommend checking out how the responses differ between the three 
 over at `Embedly Explore <http://explore.embed.ly>`_. The three endpoints are:
 
-`oEmbed <http://pro.embed.ly/docs/oembed>`_
+`oEmbed <http://embed.ly/docs/endpoints/1/oembed>`_
     This endpoint follows the oEmbed standard.
-`Objectify <http://pro.embed.ly/docs/objectify>`_
+`Objectify <http://embed.ly/docs/endpoints/2/objectify>`_
     This endpoint returns every bit of information we can determine about a URL.
-`Preview <http://pro.embed.ly/docs/Preview>`_
+`Preview <http://embed.ly/docs/endpoints/1/preview>`_
     This endpoint returns a curated list of fields we think are most important
     including images, embeds, videos and descriptions.    
 

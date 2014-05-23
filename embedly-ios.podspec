@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "http://embed.ly/docs"
   s.license          = 'MIT'
-  s.author           = { "" => "" }
+  s.author           = { "Andy Pellett" => "andy@embed.ly" }
   s.source           = { :git => "https://github.com/embedly/embedly-ios.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/embedly'
 

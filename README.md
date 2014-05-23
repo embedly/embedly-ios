@@ -40,9 +40,7 @@ To run the example project; clone the repo, and run `pod install` from the Examp
 
 ## Author
 
-Embedly
-embed.ly
-@embedly 
+@embedly
 
 ## License
 

@@ -5,8 +5,6 @@
 
 ## Usage
 
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
-
 The Embedly iOS library gives you access to all of Embedly's APIs, but there are two different ways to interact with the APIs:
 
 - Embed, Extract, and legacy APIs are available through the call{EmbedlyApi,Embed,Extract,...} methods, which initiate an HTTP call which invokes the corresponding delegate method (embedly{Success,Failure}) upon completion.
@@ -37,6 +35,8 @@ embedly-ios is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
     pod "embedly-ios"
+
+To run the example project; clone the repo, and run `pod install` from the Example directory first. You will need to add your Embedly API key to the initWithKey:delegate: method (replace "mykey" with your API key).
 
 ## Author
 

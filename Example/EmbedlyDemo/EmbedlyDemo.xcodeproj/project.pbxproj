@@ -57,7 +57,6 @@
 		1A03611A192A9EA500E44B68 /* edemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = edemViewController.m; sourceTree = "<group>"; };
 		23682E92C6DF4A6989136BD8 /* libPods-EmbedlyDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmbedlyDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A504FC5D2E44DFB98B6E11 /* libPods-EmbedlyDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmbedlyDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A292F715B6A48BBB03265CB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C976355D8EE3413B86C7AEAC /* Pods-EmbedlyDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmbedlyDemo.xcconfig"; path = "../Pods/Pods-EmbedlyDemo.xcconfig"; sourceTree = "<group>"; };
 		F19D7BC6D4CE4328B89EFB43 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,7 +94,6 @@
 				1A0360D2192A7FCC00E44B68 /* EmbedlyDemoTests */,
 				1A0360B2192A7FCC00E44B68 /* Frameworks */,
 				1A0360B1192A7FCC00E44B68 /* Products */,
-				8A292F715B6A48BBB03265CB /* Pods.xcconfig */,
 				C976355D8EE3413B86C7AEAC /* Pods-EmbedlyDemo.xcconfig */,
 			);
 			sourceTree = "<group>";

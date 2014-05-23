@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Embedly/Embedly.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:EmbedlyDemo/EmbedlyDemo.xcodeproj">
    </FileRef>
    <FileRef

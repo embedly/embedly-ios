@@ -1,0 +1,9 @@
+xcodeproj 'EmbedlyDemo/EmbedlyDemo.xcodeproj'
+
+target "EmbedlyDemo" do
+	pod "embedly-ios", :path => "../"
+end
+
+target "EmbedlyDemoTests" do
+	pod "embedly-ios", :path => "../"
+end

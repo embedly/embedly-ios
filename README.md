@@ -17,6 +17,27 @@ To make it simpler to cache API calls within your app, the call{EmbedlyApi,Embed
 
 To make batch API calls (multiple URLs at the same time), you can use the callEmbedlyApi:withUrls:params: method, which takes an NSArray of NSStrings. In this case, the API response returned in 'response' can be accessed as an NSArray of NSDictionarys.
 
+## Example
+
+A complete example app is available in the Example directory of this repo. Here are some quick examples:
+
+```objc
+Embedly *e = [[Embedly alloc] initWithKey:@"mykey" delegate:self];
+NSString *callUrl = [e callEmbed:@"techcrunch.com/embedly" params:@{@"chars": @"120"} optimizeImages:640];
+
+// within embedlySuccess:withResponse:endpoint:operation:
+self.urlTitle.text = [response objectForKey:@"title"];
+self.urlProvider.text = [response objectForKey:@"provider_name"];
+self.urlDescription.text = [response objectForKey:@"description"];
+```
+
+```objc
+Embedly *e = [[Embedly alloc] initWithKey:@"mykey" delegate:self];
+NSString *resizedImageUrl = [e buildResizedImageUrl:@"http://embed.ly/static/images/office/DSC_0157.JPG" width:250];
+NSString *croppedImageUrl = [e buildCroppedImageUrl:@"http://embed.ly/static/images/office/DSC_0123.JPG" width:100 height:100];
+NSString *filledImageUrl = [e buildDisplayUrl:@"/1/display/fill" withUrl:@"http://embed.ly/static/images/office/DSC_0161.JPG" params:@{@"width": @"500", @"height": @"500", @"color": @"1bd9f5"}];
+```
+
 ## Requirements
 
 All of Embedly's products are free to use up to a limit, you just need to sign up for an API key at:
